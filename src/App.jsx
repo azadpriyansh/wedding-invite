@@ -572,49 +572,90 @@ const AnimatedRitualScene = ({ type }) => {
       return (
         <svg viewBox="0 0 320 240" className="w-full h-full">
           <rect width="320" height="240" fill="#2D1216" />
-          <circle cx="160" cy="120" r="85" fill="#F59E0B" fillOpacity="0.12" />
-          <g className="animate-couple-float" transform="translate(160, 122)">
-            <ellipse
-              cx="-22"
-              cy="0"
-              rx="42"
-              ry="52"
-              stroke="#E11D48"
-              strokeWidth="10"
-              strokeDasharray="3 8"
-              fill="none"
-            />
-            <ellipse
-              cx="-22"
-              cy="0"
-              rx="42"
-              ry="52"
-              stroke="#FDE047"
-              strokeWidth="5"
-              strokeDasharray="1 11"
-              fill="none"
-            />
-            <ellipse
-              cx="22"
-              cy="0"
-              rx="42"
-              ry="52"
-              stroke="#F59E0B"
-              strokeWidth="10"
-              strokeDasharray="3 8"
-              fill="none"
-            />
-            <ellipse
-              cx="22"
-              cy="0"
-              rx="42"
-              ry="52"
-              stroke="#FFFBEB"
-              strokeWidth="5"
-              strokeDasharray="1 11"
-              fill="none"
-            />
+          <circle cx="160" cy="120" r="88" fill="#F59E0B" fillOpacity="0.14" />
+          {/* Decorative Golden Arch Frame */}
+          <path
+            d="M40 225 V110 C40 50 100 20 160 15 C220 20 280 50 280 110 V225"
+            stroke="#C5A059"
+            strokeWidth="1.5"
+            strokeOpacity="0.45"
+            fill="none"
+          />
+
+          {/* Outer Static Centering Group + Inner Float Animation Group */}
+          <g transform="translate(160, 118)">
+            <g className="animate-couple-float">
+              {/* Left Rose & Jasmine Varmala */}
+              <ellipse
+                cx="-24"
+                cy="-4"
+                rx="42"
+                ry="52"
+                stroke="#9F1239"
+                strokeWidth="12"
+                fill="none"
+              />
+              <ellipse
+                cx="-24"
+                cy="-4"
+                rx="42"
+                ry="52"
+                stroke="#F43F5E"
+                strokeWidth="9"
+                strokeDasharray="6 6"
+                fill="none"
+              />
+              <ellipse
+                cx="-24"
+                cy="-4"
+                rx="42"
+                ry="52"
+                stroke="#FEF08A"
+                strokeWidth="5"
+                strokeDasharray="3 9"
+                fill="none"
+              />
+
+              {/* Right Marigold & Rose Varmala */}
+              <ellipse
+                cx="24"
+                cy="-4"
+                rx="42"
+                ry="52"
+                stroke="#B45309"
+                strokeWidth="12"
+                fill="none"
+              />
+              <ellipse
+                cx="24"
+                cy="-4"
+                rx="42"
+                ry="52"
+                stroke="#F59E0B"
+                strokeWidth="9"
+                strokeDasharray="6 6"
+                fill="none"
+              />
+              <ellipse
+                cx="24"
+                cy="-4"
+                rx="42"
+                ry="52"
+                stroke="#FFFBEB"
+                strokeWidth="5"
+                strokeDasharray="3 9"
+                fill="none"
+              />
+
+              {/* Hanging Golden Floral Latkans / Tassels */}
+              <line x1="-24" y1="50" x2="-24" y2="70" stroke="#FDE68A" strokeWidth="2" />
+              <circle cx="-24" cy="73" r="5" fill="#F43F5E" stroke="#FDE68A" strokeWidth="1.2" />
+              <line x1="24" y1="50" x2="24" y2="70" stroke="#FDE68A" strokeWidth="2" />
+              <circle cx="24" cy="73" r="5" fill="#F59E0B" stroke="#FDE68A" strokeWidth="1.2" />
+            </g>
           </g>
+
+          {/* Floating Rose & Marigold Petals */}
           {[55, 95, 160, 225, 265].map((px, i) => (
             <circle
               key={i}
